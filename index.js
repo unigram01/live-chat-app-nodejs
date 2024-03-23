@@ -5,7 +5,9 @@ const server = http.createServer(app);
 const path = require("path");
 const { Server } = require("socket.io");
 const io = new Server(server);
+
 app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "views"));
 app.use(express.static("./public"));
 app.get("/", (req, res) => {
   res.render("chat.ejs");
