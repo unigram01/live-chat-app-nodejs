@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live Chatting App</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+</head>
+
+<body>
+  <section class="msger">
+    <header class="msger-header">
+      <div class="msger-header-title">
+        <i class="fa-brands fa-rocketchat"></i> Live Chat Room
+      </div>
+
+
+      <div class="msger-header-options">
+        <span id="countUsers">2</span> Users in Room
+        <span><i class="fa-solid fa-user-group"></i>
+        </span>
+      </div>
+    </header>
+
+    <main class="msger-chat" id="chat-area">
+
+      <div class="new-user" style="display: flex; justify-content: center;">
+        <p class="msg-info msg-bubble" style="background: rgb(0, 196, 65);">Welcome to Live Chat Room</p>
+      </div>
+
+    </main>
+
+    <form class="msger-inputarea" id="message-form">
+      <input id="user-message" type="text" class="msger-input" placeholder="Enter your message...">
+      <button type="submit" class="msger-send-btn">Send</button>
+    </form>
+  </section>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/chatScript.js"></script>
+</body>
+
+</html>
